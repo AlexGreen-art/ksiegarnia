@@ -1,0 +1,143 @@
+/* Zakładka — księgarnia z kawiarnią. Jedno miejsce, nie dwa działy. */
+
+:root{
+  --papier:#faf7f2;
+  --papier-cien:#f0eae0;
+  --atrament:#1d2a3a;
+  --atrament-jasny:#5c6674;
+  --palona:#c05621;
+  --szalwia:#5f7a5f;
+  --linia:#ddd5c8;
+
+  --display:"Fraunces",Georgia,serif;
+  --tekst:"Source Sans 3",system-ui,-apple-system,sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--atrament);
+  font-family:var(--tekst);font-size:17.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.12}
+:focus-visible{outline:3px solid var(--palona);outline-offset:3px}
+[id]{scroll-margin-top:72px}
+
+.owijka{width:min(1140px,100% - 44px);margin-inline:auto}
+.waska{width:min(1140px,100% - 44px);margin-inline:auto}
+.waska > *{max-width:680px}
+
+/* pasek */
+.pasek{position:sticky;top:0;z-index:30;background:var(--papier);border-bottom:1px solid var(--linia)}
+.pasek-rzad{display:flex;align-items:center;gap:20px;height:64px}
+.znak{font-family:var(--display);font-size:1.2rem;text-decoration:none;line-height:1.1}
+.znak em{display:block;font:400 .64rem/1 var(--tekst);font-style:normal;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--atrament-jasny);margin-top:4px}
+.pasek nav{margin-left:auto;display:flex;gap:20px;font-size:.92rem}
+.pasek nav a{text-decoration:none;color:var(--atrament-jasny)}
+.pasek nav a:hover{color:var(--palona)}
+.dzis{background:var(--szalwia);color:#fff;padding:9px 15px;font-size:.86rem;white-space:nowrap;
+  font-weight:600}
+
+/* otwarcie */
+.otwarcie{padding:clamp(42px,6vw,86px) 0 clamp(26px,3.5vw,40px)}
+.otwarcie h1{font-size:clamp(2.2rem,5.4vw,4rem);max-width:16ch}
+.otwarcie p{max-width:54ch;color:var(--atrament-jasny);margin:18px 0 0;
+  font-size:clamp(1.02rem,1.7vw,1.18rem)}
+.dzis-pasek{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:32px;
+  background:var(--linia)}
+.dzis-pasek div{background:var(--papier-cien);padding:16px 18px}
+.dzis-pasek b{display:block;font:600 .66rem/1 var(--tekst);letter-spacing:.2em;
+  text-transform:uppercase;color:var(--palona);margin-bottom:7px}
+.dzis-pasek span{font-size:1rem}
+.dzis-pasek small{display:block;color:var(--atrament-jasny);font-size:.86rem;margin-top:2px}
+
+/* bloki */
+.blok{padding:clamp(44px,5.5vw,74px) 0}
+.blok-cien{background:var(--papier-cien)}
+.blok-ciemny{background:var(--atrament);color:var(--papier)}
+.nadpis{font:600 .68rem/1 var(--tekst);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--palona);margin:0 0 14px}
+.blok-ciemny .nadpis{color:#e0925c}
+.tytul{font-size:clamp(1.7rem,3.4vw,2.6rem);max-width:22ch}
+.wstep{color:var(--atrament-jasny);max-width:58ch;margin-top:12px}
+.blok-ciemny .wstep{color:#a9b3c0}
+
+/* co tu można robić */
+.mozna{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px}
+.mozna article{border-top:2px solid var(--atrament);padding-top:14px}
+.mozna h3{font-size:1.14rem;margin-bottom:6px}
+.mozna p{margin:0;font-size:.94rem;color:var(--atrament-jasny)}
+
+/* półka */
+.polka{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.ksiazka{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+.ksiazka .ph{aspect-ratio:2/3}
+.ksiazka h3{font-size:1.04rem;margin-bottom:2px}
+.autor{font-size:.86rem;color:var(--atrament-jasny);margin:0 0 8px}
+.notka{margin:0;font-size:.92rem;line-height:1.5;padding-left:11px;
+  border-left:2px solid var(--palona)}
+.podpisano{display:block;font-size:.8rem;color:var(--atrament-jasny);margin-top:6px}
+.cena-ks{font-family:var(--display);font-weight:600;margin-top:8px;display:block}
+
+/* wydarzenia */
+.wydarzenia{margin-top:28px;border-top:1px solid rgba(255,255,255,.16)}
+.wyd{display:grid;grid-template-columns:132px 1fr auto auto;gap:18px;align-items:start;
+  padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.wyd .data{font-family:var(--display);font-weight:600;white-space:nowrap;font-size:1rem}
+.wyd .data span{display:block;font:400 .8rem/1.3 var(--tekst);color:#a9b3c0;margin-top:2px}
+.wyd h3{font-size:1.04rem}
+.wyd p{margin:2px 0 0;font-size:.88rem;color:#a9b3c0;max-width:52ch}
+.wstep-cena{font-family:var(--display);font-weight:600;white-space:nowrap;font-size:.98rem}
+.miejsca{font-size:.78rem;white-space:nowrap;padding:5px 11px;text-align:center;
+  border:1px solid rgba(255,255,255,.28)}
+.miejsca.malo{border-color:#e0925c;color:#e0925c}
+.miejsca.brak{color:#7d8794;border-color:#3a4757}
+
+/* kawiarnia */
+.karta{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(30px,5vw,60px);margin-top:28px}
+.grupa{margin-bottom:26px}
+.grupa h3{font:600 .68rem/1 var(--tekst);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--szalwia);padding-bottom:8px;border-bottom:2px solid var(--linia)}
+.poz{display:grid;grid-template-columns:1fr 78px;gap:12px;align-items:start;padding:9px 0;
+  border-bottom:1px solid var(--linia)}
+.poz small{display:block;color:var(--atrament-jasny);font-size:.84rem}
+.poz b{font-family:var(--display);font-weight:600;text-align:right;white-space:nowrap}
+
+/* zdjęcia */
+.ph{position:relative;overflow:hidden;background:var(--papier-cien)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.brak{background:repeating-linear-gradient(45deg,#e8e0d3 0 10px,#e0d8ca 10px 20px)}
+.blok-ciemny .ph.brak{background:repeating-linear-gradient(45deg,#2b3849 0 10px,#243040 10px 20px)}
+.ph.brak:after{content:attr(data-opis);position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:12px;
+  font:600 .7rem/1.45 var(--tekst);letter-spacing:.1em;text-transform:uppercase;color:#8b8375}
+.ph.brak img{display:none}
+.para{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:start}
+.para .ph{aspect-ratio:3/2}
+.podpis{font-size:.83rem;color:var(--atrament-jasny);margin-top:9px}
+
+/* kontakt */
+.godziny{display:grid;gap:0;margin-top:26px;max-width:420px}
+.godziny div{display:grid;grid-template-columns:1fr auto;gap:14px;padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);font-size:.98rem}
+.dane{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px}
+.dane div{border-top:2px solid #e0925c;padding-top:12px}
+.dane dt{font:600 .66rem/1 var(--tekst);letter-spacing:.2em;text-transform:uppercase;
+  color:#a9b3c0;margin-bottom:7px}
+.dane dd{margin:0;font-size:1.04rem}
+.dane a{text-decoration:none;border-bottom:2px solid #e0925c}
+main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items:center}
+
+@media(max-width:980px){
+  .mozna{grid-template-columns:repeat(2,1fr)}
+  .polka{grid-template-columns:1fr;max-width:520px}
+}
+@media(max-width:760px){
+  .mozna,.karta,.para,.dane,.dzis-pasek{grid-template-columns:1fr}
+  .wyd{grid-template-columns:1fr auto;gap:4px 14px}
+  .wyd .data{grid-column:1/-1}
+  .pasek nav{display:none}
+  .dzis{margin-left:auto}
+  main > section:last-child{min-height:0;display:block}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
