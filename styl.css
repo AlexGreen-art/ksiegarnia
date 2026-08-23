@@ -138,9 +138,10 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
   .wyd{grid-template-columns:1fr auto;gap:4px 14px}
   .wyd .data{grid-column:1/-1}
   .nav-desktop{display:none}
-  .menu-tel{display:flex;gap:18px;overflow-x:auto;font-size:.88rem;
-    padding:8px 0 10px;border-top:1px solid var(--linia)}
+  .menu-tel{display:flex;align-items:center;height:44px;gap:18px;overflow-x:auto;
+    font-size:.88rem;border-top:1px solid var(--linia)}
   .menu-tel a{text-decoration:none;color:var(--atrament-jasny);white-space:nowrap}
+  [id]{scroll-margin-top:118px}
   .dzis{margin-left:auto}
   main > section:last-child{min-height:0;display:block}
 }
