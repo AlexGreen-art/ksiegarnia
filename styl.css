@@ -32,9 +32,10 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.01
 .znak{font-family:var(--display);font-size:1.2rem;text-decoration:none;line-height:1.1}
 .znak em{display:block;font:400 .64rem/1 var(--tekst);font-style:normal;letter-spacing:.16em;
   text-transform:uppercase;color:var(--atrament-jasny);margin-top:4px}
-.pasek nav{margin-left:auto;display:flex;gap:20px;font-size:.92rem}
-.pasek nav a{text-decoration:none;color:var(--atrament-jasny)}
-.pasek nav a:hover{color:var(--palona)}
+.nav-desktop{margin-left:auto;display:flex;gap:20px;font-size:.92rem}
+.menu-tel{display:none}
+.nav-desktop a{text-decoration:none;color:var(--atrament-jasny)}
+.nav-desktop a:hover{color:var(--palona)}
 .dzis{background:var(--szalwia);color:#fff;padding:9px 15px;font-size:.86rem;white-space:nowrap;
   font-weight:600}
 
@@ -136,7 +137,10 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
   .mozna,.karta,.para,.dane,.dzis-pasek{grid-template-columns:1fr}
   .wyd{grid-template-columns:1fr auto;gap:4px 14px}
   .wyd .data{grid-column:1/-1}
-  .pasek nav{display:none}
+  .nav-desktop{display:none}
+  .menu-tel{display:flex;gap:18px;overflow-x:auto;font-size:.88rem;
+    padding:8px 0 10px;border-top:1px solid var(--linia)}
+  .menu-tel a{text-decoration:none;color:var(--atrament-jasny);white-space:nowrap}
   .dzis{margin-left:auto}
   main > section:last-child{min-height:0;display:block}
 }
