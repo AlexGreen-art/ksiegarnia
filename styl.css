@@ -147,3 +147,15 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
   main > section:last-child{min-height:0;display:block}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+
+/* ---------- Zdjęcia: tło otwarcia i pasy fotograficzne ---------- */
+.otwarcie-tlo{background:linear-gradient(90deg,rgba(250,247,242,.97) 0%,rgba(250,247,242,.94) 40%,
+  rgba(250,247,242,.68) 70%,rgba(250,247,242,.48) 100%),url('img/hero-wnetrze.jpg') center/cover no-repeat}
+.pas-foto{margin:clamp(24px,3.2vw,40px) 0 0}
+.pas-foto img{width:100%;height:clamp(230px,30vw,400px);object-fit:cover;border-radius:3px}
+@media(max-width:700px){
+  .otwarcie-tlo{background:linear-gradient(180deg,rgba(250,247,242,.93) 0%,rgba(250,247,242,.96) 50%,
+    rgba(250,247,242,.99) 100%),url('img/hero-wnetrze.jpg') center/cover no-repeat}
+  .pas-foto img{height:200px}
+}
