@@ -159,3 +159,12 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
     rgba(250,247,242,.99) 100%),url('img/hero-wnetrze.jpg') center/cover no-repeat}
   .pas-foto img{height:200px}
 }
+
+
+/* --- akcja przy pozycji oferty (27.09.2026) --- */
+.akcja{display:inline-block;white-space:nowrap;font-size:.8rem;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;color:inherit;border:1px solid currentColor;border-radius:999px;
+  padding:8px 14px;opacity:.72;transition:opacity .15s}
+.akcja:hover,.akcja:focus-visible{opacity:1}
+.wyd{grid-template-columns:max-content 1fr auto auto max-content}
+@media(max-width:760px){.wyd{grid-template-columns:1fr auto}.wyd .akcja{grid-column:1/-1;justify-self:start;margin-top:8px}}
